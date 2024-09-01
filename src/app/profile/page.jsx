@@ -74,13 +74,13 @@ const Profile = () => {
 
   return (
     <main>
-      <SectionLayout class={"first-view"}>
+      <SectionLayout styleName={"first-view"}>
         <PageTitle word={titleText} />
       </SectionLayout>
 
       <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow={false} />
 
-      <SectionLayout class={"skills"}>
+      <SectionLayout styleName={"skills"}>
         <h2 className="section-title">Skills</h2>
 
         <div className={styles.contents}>

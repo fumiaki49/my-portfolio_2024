@@ -16,7 +16,7 @@ const myWork = () => {
   return (
     <>
       <main>
-        <SectionLayout class={"first-view works"}>
+        <SectionLayout styleName={"first-view works"}>
           <h1 className="page-title">
             掃苔屋かわはらサービス紹介サイトの新規作成
           </h1>
@@ -30,7 +30,7 @@ const myWork = () => {
           </a>
         </SectionLayout>
 
-        <SectionLayout class={styles.worksImg}>
+        <SectionLayout styleName={styles.worksImg}>
           <Image
             src="/soutaiya-kawahara_mockup.png"
             width="638"
@@ -46,22 +46,22 @@ const myWork = () => {
           </ul>
         </SectionLayout>
 
-        <SectionLayout class={`${styles.worksAbout} gray-back`}>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>概要</p>
-            <p class={styles.description}>
+        <SectionLayout styleName={`${styles.worksAbout} gray-back`}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>概要</p>
+            <p className={styles.description}>
               両親の知人に、新たに墓参り代行サービスを始める方がおられ、これから活動をしていくにあたって、サービスを紹介するためのWebページが欲しいとの相談を受けたので、制作いたしました。
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>課題</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>課題</p>
+            <p className={styles.description}>
               新規事業を始めていくにあたって、サービス紹介をするためのサイトを準備したい
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>工夫したこと・効果</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>工夫したこと・効果</p>
+            <p className={styles.description}>
               使用しているイラストは、知人に依頼して制作していただきました。
               <br />
               墓参り代行というサービスの特徴的に信頼や安心感が一番大切だと感じたので、イラスト制作をお願いする際に、柔らかい雰囲気や優しさを感じるような物になるようにしていただきました。また、イラストや写真をメインにすることで、よりお客様にイメージが伝わるようなデザインになるように意識して、制作しました。
@@ -69,7 +69,7 @@ const myWork = () => {
           </div>
         </SectionLayout>
 
-        <SectionLayout class={styles.otherWorks}>
+        <SectionLayout styleName={styles.otherWorks}>
           <h2 className="section-title">Other Works</h2>
           <div className="contents">
             <WorksList />

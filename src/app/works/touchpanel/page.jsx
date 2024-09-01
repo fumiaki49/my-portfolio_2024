@@ -16,7 +16,7 @@ const myWork = () => {
   return (
     <>
       <main>
-        <SectionLayout class={"first-view works"}>
+        <SectionLayout styleName={"first-view works"}>
           <h1 className="page-title">
             カメラ方式タッチパネル製品紹介サイトリニューアル
           </h1>
@@ -30,7 +30,7 @@ const myWork = () => {
           </a>
         </SectionLayout>
 
-        <SectionLayout class={styles.worksImg}>
+        <SectionLayout styleName={styles.worksImg}>
           <Image
             src="/touchpanel_mockup.png"
             width="638"
@@ -46,24 +46,24 @@ const myWork = () => {
           </ul>
         </SectionLayout>
 
-        <SectionLayout class={`${styles.worksAbout} gray-back`}>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>概要</p>
-            <p class={styles.description}>
+        <SectionLayout styleName={`${styles.worksAbout} gray-back`}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>概要</p>
+            <p className={styles.description}>
               株式会社ニューコムのシロク事業部で取り扱っている製品「カメラ方式タッチパネル」のwebサイトをリニューアルいたしました。
               <br />
               既存のWebページは一昔前のデザインであったので、上司から新しくリニューアルして、問い合わせ数を増やしたいとの要望があり、作成いたしました。
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>課題</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>課題</p>
+            <p className={styles.description}>
               リニューアル以前のサイトの課題として、どの様な製品なのかが一目でわからない事、レスポンシブ対応が出来ていない点に加えて、取り扱っている製品とWebサイトとの間にギャップが大きく、製品の魅力を伝えられていない点がありました。
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>工夫したこと・効果</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>工夫したこと・効果</p>
+            <p className={styles.description}>
               ファーストビューにキャッチコピーと製品のイメージ写真を使用し、どのような製品なのかをイメージしやすいようにしました。
               <br />
               カメラ方式タッチパネルは画面に触れなくても画面操作が可能になるという現代的な技術なので、サイト全体を通してアニメーションを取り入れることで、よりモダンな印象を持っていただけるように意識しました。
@@ -72,7 +72,7 @@ const myWork = () => {
           </div>
         </SectionLayout>
 
-        <SectionLayout class={styles.otherWorks}>
+        <SectionLayout styleName={styles.otherWorks}>
           <h2 className="section-title">Other Works</h2>
           <div className="contents">
             <WorksList />

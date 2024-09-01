@@ -11,13 +11,13 @@ export default function Home() {
   const titleText = `KITAGAWA\nFUMIAKI\nPORTFOLIO WEBSITE.`;
   return (
     <main>
-      <SectionLayout class={"first-view top-page"}>
+      <SectionLayout styleName={"first-view top-page"}>
         <PageTitle word={titleText} />
       </SectionLayout>
 
       <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow />
 
-      <SectionLayout class={"work"} id={"works"}>
+      <SectionLayout styleName={"work"} id={"works"}>
         <h2 className="section-title">Work</h2>
         <div className="contents">
           <WorksList />

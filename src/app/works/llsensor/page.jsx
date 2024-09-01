@@ -16,7 +16,7 @@ const myWork = () => {
   return (
     <>
       <main>
-        <SectionLayout class={"first-view works"}>
+        <SectionLayout styleName={"first-view works"}>
           <h1 className="page-title">LLsensor 製品紹介サイトリニューアル</h1>
           <a
             href="https://www.llsensor.com/"
@@ -28,7 +28,7 @@ const myWork = () => {
           </a>
         </SectionLayout>
 
-        <SectionLayout class={styles.worksImg}>
+        <SectionLayout styleName={styles.worksImg}>
           <Image
             src="/llsensor-mockup.png"
             width="638"
@@ -44,30 +44,30 @@ const myWork = () => {
           </ul>
         </SectionLayout>
 
-        <SectionLayout class={`${styles.worksAbout} gray-back`}>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>概要</p>
-            <p class={styles.description}>
+        <SectionLayout styleName={`${styles.worksAbout} gray-back`}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>概要</p>
+            <p className={styles.description}>
               株式会社ニューコムのシロク事業部で取り扱っている製品「LL sensor
               (エルエルセンサー)」のwebサイトをリニューアルいたしました。
               既存のWebページは一昔前のデザインであったので、上司から新しくリニューアルして、問い合わせ数を増やしたいとの要望があり、作成いたしました。
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>課題</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>課題</p>
+            <p className={styles.description}>
               リニューアル以前のサイトの課題として、どの様な製品なのかが一目でわからない事、問い合わせまでの導線が分かりづらい事、レスポンシブ対応が出来ていない点がありました。
             </p>
           </div>
-          <div class={styles.textBox}>
-            <p class={styles.heading}>工夫したこと・効果</p>
-            <p class={styles.description}>
+          <div className={styles.textBox}>
+            <p className={styles.heading}>工夫したこと・効果</p>
+            <p className={styles.description}>
               ファーストビューにキャッチコピーと製品のイメージ写真を使用し、どのような製品なのかをイメージしやすいようにしました。問い合わせに関しては、ナビゲーションにボタンを配置する以外に、製品の仕様・料金まで確認して頂けるような、関心が高いお客様を問い合わせに繋げる目的で、仕様・料金が記載されているページに大きめの問い合わせボタンを設置しました。
             </p>
           </div>
         </SectionLayout>
 
-        <SectionLayout class={styles.otherWorks}>
+        <SectionLayout styleName={styles.otherWorks}>
           <h2 className="section-title">Other Works</h2>
           <div className="contents">
             <WorksList />
