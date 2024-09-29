@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 const Profile = () => {
-  const aboutMe = `1997年4月9日生まれの27歳で、滋賀県で生まれ育ちました。\n京都外国語専門学校卒業後は、興味があったWEB制作を学ぶためにTECH::EXPERTにてプログラミングの学習をしました。\n現在は株式会社ニューコムの営業企画部のウェブ担当として、主にWEBサイトの情報更新やページ作成、既存ページのリニューアルを担当しています。その他、年に数回開催されている展示会で使用する製品紹介資料の準備や動画制作、ブーススタッフの業務も担当しています。\n日々の業務では、動画制作をはじめ、経験の無い仕事を担当する事もあるので、初めての事であっても、自身の経験になると捉えて、取り組んでいます。`;
+  const aboutMe = `1997年4月9日生まれの27歳で、滋賀県で生まれ育ちました。\n京都外国語専門学校卒業後は、興味があったWEB制作を学ぶためにTECH::EXPERTにてプログラミングの学習をしました。\n現在は株式会社ニューコムの営業企画部のウェブ担当として、主にWEBサイトの情報更新やページ作成、既存ページのリニューアルを担当しています。その他、年に数回開催されている展示会で使用する製品紹介資料の準備や動画制作、ブーススタッフの業務も担当しています。\n日々の業務では、動画編集をはじめ、経験の無い仕事を担当する事もあるので、初めての事であっても、自身の経験になると捉えて、取り組んでいます。`;
   const titleText = "My Profile.";
   const myHistory = [
     {
@@ -37,7 +37,7 @@ const Profile = () => {
     },
     {
       year: "2020.05",
-      event: `東京にあるIT企業に就職予定だったが、コロナウィルスの影響により、入社時期の目処がたたない状況が続く。\nこの期間は、入社前研修でWEBフロントエンド開発の勉強をしながら過ごす。`,
+      event: `東京にあるIT企業に就職予定だったが、新型コロナの影響により、入社時期の目処がたたない状況が続く。\nこの期間は、入社前研修でWEBフロントエンド開発の勉強をしながら過ごす。`,
     },
     {
       year: "2020.07",
@@ -158,27 +158,6 @@ const Profile = () => {
           </ul>
         </div>
       </SectionLayout>
-      {/* <section className={styles.history}>
-        <div className="inner">
-          <h2 className="section-title">History</h2>
-          <div className="contents">
-            <ul className={styles.myHistory}>
-              {myHistory.map((history) => {
-                return (
-                  <li>
-                    <p className={styles.year}>{history.year}</p>
-                    <div className={styles.timeLine}>
-                      <div className={styles.circle}></div>
-                      <div className={styles.line}></div>
-                    </div>
-                    <div className={styles.event}>{history.event}</div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 };
