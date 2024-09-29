@@ -56,11 +56,11 @@ const myWork = () => {
           <div className={styles.textBox}>
             <p className={styles.heading}>課題</p>
             <p className={styles.description}>
-              新規事業を始めていくにあたって、サービス紹介をするためのサイトを準備したい
+              新規事業を始めていくにあたって、サービス紹介をするためのサイトがなかった。
             </p>
           </div>
           <div className={styles.textBox}>
-            <p className={styles.heading}>工夫したこと・効果</p>
+            <p className={styles.heading}>工夫したこと</p>
             <p className={styles.description}>
               使用しているイラストは、知人に依頼して制作していただきました。
               <br />
