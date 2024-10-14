@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import * as motion from "framer-motion/client";
+
 import SectionLayout from "@/components/SectionLayout";
 import MyProfile from "@/components/MyProfile";
 import PageTitle from "@/components/PageTitle";
@@ -12,6 +14,18 @@ export const metadata = {
 };
 
 const Profile = () => {
+  const pageVariants = {
+    initial: { opacity: 0 },
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+  };
+
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 1.5, // アニメーションの速度
+  };
+
   const aboutMe = `1997年4月9日生まれの27歳で、滋賀県で生まれ育ちました。\n京都外国語専門学校卒業後は、興味があったWEB制作を学ぶためにTECH::EXPERTにてプログラミングの学習をしました。\n現在は株式会社ニューコムの営業企画部のウェブ担当として、主にWEBサイトの情報更新やページ作成、既存ページのリニューアルを担当しています。その他、年に数回開催されている展示会で使用する製品紹介資料の準備や動画制作、ブーススタッフの業務も担当しています。\n日々の業務では、動画編集をはじめ、経験の無い仕事を担当する事もあるので、初めての事であっても、自身の経験になると捉えて、取り組んでいます。`;
   const titleText = "My Profile.";
   const myHistory = [
@@ -74,90 +88,98 @@ const Profile = () => {
 
   return (
     <main>
-      <SectionLayout styleName={"first-view"}>
-        <PageTitle word={titleText} />
-      </SectionLayout>
+      <motion.div
+        initial="initial" // 初期状態
+        animate="in" // 表示状態
+        exit="out" // 終了状態
+        variants={pageVariants} // 定義したアニメーションを適用
+        transition={pageTransition} // アニメーションの遷移
+      >
+        <SectionLayout styleName={"first-view"}>
+          <PageTitle word={titleText} />
+        </SectionLayout>
 
-      <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow={false} />
+        <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow={false} />
 
-      <SectionLayout styleName={"skills"}>
-        <h2 className="section-title">Skills</h2>
+        <SectionLayout styleName={"skills"}>
+          <h2 className="section-title">Skills</h2>
 
-        <div className={styles.contents}>
-          <div className={styles.skill}>
-            <figure>
-              <figcaption className={styles.skillTitle}>
-                プログラミング
-              </figcaption>
-              <Image
-                src="/pc-programing.png"
-                width="250"
-                height="180"
-                alt="programing"
-                priority
-              ></Image>
-            </figure>
-            <p className={styles.aboutSkills}>
-              HTML/CSS、JavaScriptを使用してページを作成できます。また、PHPで申し込みフォーム等を作成できます。コードを書く際は、無駄な記述がなるべく無いように意識しています。また、ReactとNext.jsを学習しており、このポートフォリオサイトはReactとNext.jsを使って作成しています。
-            </p>
-            <table className={styles.label}>
-              <tbody>
-                <tr>
-                  <th className={styles.labelTitle}>使用言語:</th>
-                  <td>HTML/CSS、JavaScript、PHP、 React、Next.js</td>
-                </tr>
-                <tr>
-                  <th className={styles.labelTitle}>使用ツール:</th>
-                  <td>Deamweaver、Visual Studio Code</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className={styles.contents}>
+            <div className={styles.skill}>
+              <figure>
+                <figcaption className={styles.skillTitle}>
+                  プログラミング
+                </figcaption>
+                <Image
+                  src="/pc-programing.png"
+                  width="250"
+                  height="180"
+                  alt="programing"
+                  priority
+                ></Image>
+              </figure>
+              <p className={styles.aboutSkills}>
+                HTML/CSS、JavaScriptを使用してページを作成できます。また、PHPで申し込みフォーム等を作成できます。コードを書く際は、無駄な記述がなるべく無いように意識しています。また、ReactとNext.jsを学習しており、このポートフォリオサイトはReactとNext.jsを使って作成しています。
+              </p>
+              <table className={styles.label}>
+                <tbody>
+                  <tr>
+                    <th className={styles.labelTitle}>使用言語:</th>
+                    <td>HTML/CSS、JavaScript、PHP、 React、Next.js</td>
+                  </tr>
+                  <tr>
+                    <th className={styles.labelTitle}>使用ツール:</th>
+                    <td>Deamweaver、Visual Studio Code</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className={styles.skill}>
+              <figure>
+                <figcaption className={styles.skillTitle}>デザイン</figcaption>
+                <Image
+                  src="/pc-desigin.png"
+                  width="250"
+                  height="180"
+                  alt="desigin"
+                  priority
+                ></Image>
+              </figure>
+              <p className={styles.aboutSkills}>
+                現職では主にillustratorを使用して、WEBデザインや資料作成を行なっています。まだまだ学習中の段階ですが、日頃から「SANKOU!」などのギャラリーサイトや教材を通して、WEBデザイン・アニメーションの勉強をしています。
+              </p>
+              <table className={styles.label}>
+                <tbody>
+                  <tr>
+                    <th className={styles.labelTitle}>使用ツール:</th>
+                    <td>Illustrator、InDesign、Figma</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div className={styles.skill}>
-            <figure>
-              <figcaption className={styles.skillTitle}>デザイン</figcaption>
-              <Image
-                src="/pc-desigin.png"
-                width="250"
-                height="180"
-                alt="desigin"
-                priority
-              ></Image>
-            </figure>
-            <p className={styles.aboutSkills}>
-              現職では主にillustratorを使用して、WEBデザインや資料作成を行なっています。まだまだ学習中の段階ですが、日頃から「SANKOU!」などのギャラリーサイトや教材を通して、WEBデザイン・アニメーションの勉強をしています。
-            </p>
-            <table className={styles.label}>
-              <tbody>
-                <tr>
-                  <th className={styles.labelTitle}>使用ツール:</th>
-                  <td>Illustrator、InDesign、Figma</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </SectionLayout>
+        </SectionLayout>
 
-      <SectionLayout class={styles.history}>
-        <h2 className="section-title">History</h2>
-        <div className="contents">
-          <ul className={styles.myHistory}>
-            {myHistory.map((history, index) => {
-              return (
-                <li key={index}>
-                  <p className={styles.year}>{history.year}</p>
-                  <div className={styles.timeLine}>
-                    <div className={styles.circle}></div>
-                    <div className={styles.line}></div>
-                  </div>
-                  <div className={styles.event}>{history.event}</div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </SectionLayout>
+        <SectionLayout class={styles.history}>
+          <h2 className="section-title">History</h2>
+          <div className="contents">
+            <ul className={styles.myHistory}>
+              {myHistory.map((history, index) => {
+                return (
+                  <li key={index}>
+                    <p className={styles.year}>{history.year}</p>
+                    <div className={styles.timeLine}>
+                      <div className={styles.circle}></div>
+                      <div className={styles.line}></div>
+                    </div>
+                    <div className={styles.event}>{history.event}</div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </SectionLayout>
+      </motion.div>
     </main>
   );
 };

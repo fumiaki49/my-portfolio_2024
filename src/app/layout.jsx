@@ -1,6 +1,7 @@
 import { Noto_Sans_JP } from "next/font/google";
 import "@/styles/reset.css";
 import "@/styles/global.css";
+import { AnimatePresence } from "framer-motion";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,9 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body className={NotoSansJp.className}>
-        <Header />
-        {children}
-        <Footer />
+        <AnimatePresence mode="wait">
+          <Header />
+          {children}
+          <Footer />
+        </AnimatePresence>
       </body>
     </html>
   );
