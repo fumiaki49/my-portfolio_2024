@@ -25,7 +25,7 @@ export default function Home() {
   const titleText = `KITAGAWA\nFUMIAKI\nPORTFOLIO WEBSITE.`;
 
   return (
-    <main>
+    <main id="top">
       <motion.div
         initial="initial" // 初期状態
         animate="in" // 表示状態
@@ -40,7 +40,7 @@ export default function Home() {
         <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow />
 
         <SectionLayout styleName={"work"} id={"works"}>
-          <h2 className="section-title">Work</h2>
+          <h2 className="section-title">Works</h2>
           <div className="contents">
             <WorksList />
           </div>
