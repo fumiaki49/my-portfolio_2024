@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 
+import PageTitle from "@/components/PageTitle";
 import SectionLayout from "@/components/SectionLayout";
 import WorksList from "@/components/WorkList";
 
@@ -37,9 +38,7 @@ const myWork = () => {
           transition={pageTransition} // アニメーションの遷移
         >
           <SectionLayout styleName={"first-view works"}>
-            <h1 className="page-title">
-              カメラ方式タッチパネル製品紹介サイトリニューアル
-            </h1>
+            <PageTitle word="カメラ方式タッチパネル製品紹介サイト" />
             <a
               href="https://www.xiroku.com/touchpanel/index.html"
               target="_blank"

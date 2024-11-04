@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 
+import PageTitle from "@/components/PageTitle";
 import SectionLayout from "@/components/SectionLayout";
 import WorksList from "@/components/WorkList";
 
@@ -37,7 +38,7 @@ const myWork = () => {
           transition={pageTransition} // アニメーションの遷移
         >
           <SectionLayout styleName={"first-view works"}>
-            <h1 className="page-title">掃苔屋かわはらサービス紹介サイト</h1>
+            <PageTitle word="掃苔屋かわはらサービス紹介サイト" />
             <a
               href="https://soutaiya-kawahara.netlify.app/"
               target="_blank"

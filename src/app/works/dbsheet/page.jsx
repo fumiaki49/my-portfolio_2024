@@ -39,8 +39,7 @@ const myWork = () => {
           transition={pageTransition} // アニメーションの遷移
         >
           <SectionLayout styleName={"first-view works"}>
-            <PageTitle word="dbSheetClient 製品紹介サイト" />
-            {/* <h1 className="page-title">dbSheetClient 製品紹介サイト</h1> */}
+            <PageTitle word="dbSheet 製品紹介サイト" />
             <a
               href="https://dbsheetclient.jp/"
               target="_blank"
