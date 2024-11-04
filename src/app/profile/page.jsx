@@ -87,7 +87,7 @@ const Profile = () => {
   ];
 
   return (
-    <main>
+    <main id="top">
       <motion.div
         initial="initial" // 初期状態
         animate="in" // 表示状態
@@ -99,7 +99,12 @@ const Profile = () => {
           <PageTitle word={titleText} />
         </SectionLayout>
 
-        <MyProfile profile={"profile"} aboutMe={aboutMe} moreBtnShow={false} />
+        <MyProfile
+          profile={"profile"}
+          aboutMe={aboutMe}
+          personalInfo
+          moreBtnShow={false}
+        />
 
         <SectionLayout styleName={"skills"}>
           <h2 className="section-title">Skills</h2>
