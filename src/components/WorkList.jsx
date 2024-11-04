@@ -24,7 +24,7 @@ const WorksList = () => {
       href: "/works/dbsheet/",
       src: "/dbsheet.png",
       alt: "dbsheet",
-      workTitle: "株式会社ニューコム | dbSheetClient製品紹介サイト",
+      workTitle: "株式会社ニューコム | dbSheet製品紹介サイト",
     },
     {
       href: "/works/soutaiya_kawahara/",

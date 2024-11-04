@@ -7,10 +7,10 @@ const Header = () => {
   return (
     <header className="global-nav ">
       <div className="links inner">
-        <Link href="/">Home</Link>
-        <Link href="/profile">Profile</Link>
+        <Link href="/#top">Home</Link>
+        <Link href="/profile/#top">Profile</Link>
         <Link href="/#works">Works</Link>
-        <Link href="">Contact</Link>
+        <Link href="mailto:me.fk39&#64;gmail.com">Contact</Link>
       </div>
     </header>
   );

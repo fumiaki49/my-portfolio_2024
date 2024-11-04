@@ -7,10 +7,10 @@ const Footer = () => {
       <footer className="footer">
         <div className="inner">
           <div className="links">
-            <Link href="/">Home</Link>
-            <Link href="/profile">Profile</Link>
+            <Link href="/#top">Home</Link>
+            <Link href="/profile/#top">Profile</Link>
             <Link href="/#works">Works</Link>
-            <Link href="/">Contact</Link>
+            <Link href="mailto:me.fk39&#64;gmail.com">Contact</Link>
           </div>
           <p className="copyright">&copy;Kitagawa Fumiaki</p>
         </div>
