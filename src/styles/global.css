@@ -11,6 +11,10 @@
   white-space: pre-wrap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--white-color);
 }
@@ -46,7 +50,7 @@ main {
 }
 
 section {
-  padding: 40px 0;
+  padding: 72px 0;
 }
 
 .gray-back {
@@ -69,8 +73,20 @@ section {
   justify-content: flex-end;
 }
 
-.global-nav .links a {
+.global-nav .links a,
+.footer .links a {
   font-size: 16px;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* 下線の初期位置 */
+  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  transition: background-size 0.3s;
+}
+
+.global-nav .links a:hover,
+.footer .links a:hover {
+  background-position: bottom left; /* 下線のホバー時位置 */
+  background-size: 100% 1px; /* 下線の横幅を100%にする */
 }
 
 .global-nav .links > * + *,
@@ -126,7 +142,6 @@ section {
 }
 
 /* プロフィール */
-
 .profile .my-name {
   font-size: 32px;
   line-height: 48px;
@@ -150,6 +165,43 @@ section {
 
 .profile .contents .default-text {
   margin-top: 32px;
+}
+
+.personal-info {
+  margin-top: 32px;
+}
+
+.personal-info > * + * {
+  margin-top: 16px;
+}
+
+.personal-info .text-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.personal-info .text-box h4 {
+  border: 1px solid var(--default-font-color);
+  padding: 4px 8px;
+  font-weight: normal;
+}
+
+.personal-info .default-text {
+  margin-top: 0 !important;
+}
+
+.personal-info ul li {
+  width: fit-content;
+}
+
+.personal-info ul li a img {
+  transition: all 0.3s;
+}
+
+.personal-info ul li:hover a img {
+  opacity: 0.7;
 }
 
 /* Moreボタン */
