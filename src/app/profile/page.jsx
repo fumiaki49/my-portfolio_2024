@@ -109,8 +109,8 @@ const Profile = () => {
         <SectionLayout styleName={"skills"}>
           <h2 className="section-title">Skills</h2>
 
-          <div className={styles.contents}>
-            <div className={styles.skill}>
+          <ul className={styles.contents}>
+            <li className={styles.skill}>
               <figure>
                 <figcaption className={styles.skillTitle}>
                   プログラミング
@@ -126,20 +126,22 @@ const Profile = () => {
               <p className={styles.aboutSkills}>
                 HTML/CSS、JavaScriptを使用してページを作成できます。また、PHPで申し込みフォーム等を作成できます。コードを書く際は、無駄な記述がなるべく無いように意識しています。また、ReactとNext.jsを学習しており、このポートフォリオサイトはReactとNext.jsを使って作成しています。
               </p>
-              <table className={styles.label}>
-                <tbody>
-                  <tr>
-                    <th className={styles.labelTitle}>使用言語:</th>
-                    <td>HTML/CSS、JavaScript、PHP、 React、Next.js</td>
-                  </tr>
-                  <tr>
-                    <th className={styles.labelTitle}>使用ツール:</th>
-                    <td>Deamweaver、Visual Studio Code</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className={styles.skill}>
+              <div className={styles.tableWrapper}>
+                <table className={styles.label}>
+                  <tbody>
+                    <tr>
+                      <th className={styles.labelTitle}>使用言語:</th>
+                      <td>HTML/CSS、JavaScript、PHP、 React、Next.js</td>
+                    </tr>
+                    <tr>
+                      <th className={styles.labelTitle}>使用ツール:</th>
+                      <td>Deamweaver、Visual Studio Code</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li className={styles.skill}>
               <figure>
                 <figcaption className={styles.skillTitle}>デザイン</figcaption>
                 <Image
@@ -153,16 +155,18 @@ const Profile = () => {
               <p className={styles.aboutSkills}>
                 現職では主にillustratorを使用して、WEBデザインや資料作成を行なっています。まだまだ学習中の段階ですが、日頃から「SANKOU!」などのギャラリーサイトや教材を通して、WEBデザイン・アニメーションの勉強をしています。
               </p>
-              <table className={styles.label}>
-                <tbody>
-                  <tr>
-                    <th className={styles.labelTitle}>使用ツール:</th>
-                    <td>Illustrator、InDesign、Figma</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+              <div className={styles.tableWrapper}>
+                <table className={styles.label}>
+                  <tbody>
+                    <tr>
+                      <th className={styles.labelTitle}>使用ツール:</th>
+                      <td>Illustrator、InDesign、Figma</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
         </SectionLayout>
 
         <SectionLayout class={styles.history}>
