@@ -43,7 +43,7 @@ const WorksList = () => {
           work.href !== pathname && (
             <li key={work.alt}>
               <Link href={work.href}>
-                <figure className="thumbnail">
+                <div className="thumbnail">
                   <Image
                     src={work.src}
                     width={1280}
@@ -51,7 +51,7 @@ const WorksList = () => {
                     alt={work.alt}
                     priority
                   />
-                </figure>
+                </div>
                 <p className="work-title">{work.workTitle}</p>
               </Link>
               <div className="label-box">

@@ -28,13 +28,13 @@ const MyProfile = (props) => {
             <p className="default-text">{props.aboutMe}</p>
             {props.personalInfo && (
               <div className="personal-info">
-                <div className="text-box">
+                <div className="content-wrapper">
                   <h4>趣味</h4>
                   <p className="default-text">
                     ゲーム、アニメ鑑賞、音楽鑑賞、散策など
                   </p>
                 </div>
-                <div className="text-box">
+                <div className="content-wrapper">
                   <h4>SNS</h4>
                   <ul>
                     <li>
@@ -52,8 +52,8 @@ const MyProfile = (props) => {
                 </div>
               </div>
             )}
+            {props.moreBtnShow && <MoreBtn />}
           </div>
-          {props.moreBtnShow && <MoreBtn />}
         </div>
       </div>
     </section>
