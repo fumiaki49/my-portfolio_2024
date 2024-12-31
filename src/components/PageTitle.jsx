@@ -6,7 +6,21 @@ import { Typewriter } from "react-simple-typewriter";
 
 function PageTitle(props) {
   const [startTyping, setStartTyping] = useState(false);
+  const [enableAnimation, setEnableAnimation] = useState(true);
   const delayStart = 500;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setEnableAnimation(window.innerWidth > 500);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,7 +32,11 @@ function PageTitle(props) {
 
   return (
     <h1 className="page-title">
-      {startTyping && <Typewriter words={[props.word]} cursor typeSpeed={40} />}
+      {enableAnimation && startTyping ? (
+        <Typewriter words={[props.word]} cursor typeSpeed={40} />
+      ) : (
+        props.word
+      )}
     </h1>
   );
 }
