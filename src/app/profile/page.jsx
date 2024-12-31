@@ -169,7 +169,7 @@ const Profile = () => {
           </ul>
         </SectionLayout>
 
-        <SectionLayout class={styles.history}>
+        <SectionLayout styleName={styles.history}>
           <h2 className="section-title">History</h2>
           <div className="contents">
             <ul className={styles.myHistory}>
