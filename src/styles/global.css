@@ -78,22 +78,21 @@ section {
   font-size: 16px;
   background-image: linear-gradient(#000, #000);
   background-repeat: no-repeat;
-  background-position: bottom right; /* 下線の初期位置 */
-  background-size: 0 1px; /* 下線のサイズ（横幅、高さ） */
+  background-position: bottom right;
+  background-size: 0 1px;
   transition: background-size 0.3s;
 }
 
 .global-nav .links a:hover,
 .footer .links a:hover {
-  background-position: bottom left; /* 下線のホバー時位置 */
-  background-size: 100% 1px; /* 下線の横幅を100%にする */
+  background-position: bottom left;
+  background-size: 100% 1px;
 }
 
 .global-nav .links > * + *,
 .footer .links > * + * {
   margin-left: 24px;
 }
-/* ナビゲーション */
 
 /* フッター */
 .footer {
@@ -153,14 +152,24 @@ section {
   font-weight: lighter;
 }
 
-.contents {
+/* .contents {
   position: relative;
-}
+} */
 
 .profile .contents {
   display: grid;
   grid-template-columns: 20% 75%;
   gap: 5%;
+}
+
+.profile .contents .text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .contents .default-link {
+  margin-top: auto;
+  margin-left: auto;
 }
 
 .profile .contents .default-text {
@@ -175,14 +184,14 @@ section {
   margin-top: 16px;
 }
 
-.personal-info .text-box {
+.personal-info .content-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 }
 
-.personal-info .text-box h4 {
+.personal-info .content-wrapper h4 {
   border: 1px solid var(--default-font-color);
   padding: 4px 8px;
   font-weight: normal;
@@ -202,6 +211,7 @@ section {
 
 .personal-info ul li:hover a img {
   opacity: 0.7;
+  transform: translateY(-2px);
 }
 
 /* Moreボタン */
@@ -210,9 +220,6 @@ section {
   width: fit-content;
   font-size: 24px;
   padding: 4px 8px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
   border: 1px solid var(--gray-color2);
   transition: all 0.3s;
 }
@@ -224,7 +231,7 @@ section {
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 5vw;
+  gap: 3vw;
 }
 
 .work-list li .work-title,
@@ -234,15 +241,11 @@ section {
 
 .work-list li .thumbnail {
   transition: all 0.3s;
+  border: 0.75px solid var(--gray-color);
 }
 
 .work-list li a:hover .thumbnail {
   box-shadow: 5px 5px 20px -5px #bdc0ba;
-}
-
-.work-list li .work-title {
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .work-list li .label-box {
