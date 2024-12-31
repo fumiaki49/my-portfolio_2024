@@ -1,6 +1,7 @@
 import { Noto_Sans_JP } from "next/font/google";
 import "@/styles/reset.css";
 import "@/styles/global.css";
+import "@/styles/responsive.css";
 import { AnimatePresence } from "framer-motion";
 
 import Header from "@/components/Header";
