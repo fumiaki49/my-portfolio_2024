@@ -24,14 +24,31 @@
 }
 
 .textBox {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .textBox:last-child {
   margin-bottom: 0;
 }
 
-.textBox > * + * {
+.imgBox ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: masonry;
+  gap: 16px;
+}
+
+.imgBox ul li {
+  width: fit-content;
+  height: fit-content;
+}
+
+.imgBox ul li img {
+  border: 1px solid var(--gray-color);
+}
+
+.textBox > * + *,
+.imgBox > * + * {
   margin-top: 8px;
 }
 
