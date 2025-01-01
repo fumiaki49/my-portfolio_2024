@@ -39,14 +39,14 @@ const myWork = () => {
         >
           <SectionLayout styleName={"first-view works"}>
             <PageTitle word="LLsensor 製品紹介サイト" />
-            <a
+            {/* <a
               href="https://www.llsensor.com/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >
               https://www.llsensor.com/
-            </a>
+            </a> */}
           </SectionLayout>
 
           <SectionLayout styleName={styles.worksImg}>
@@ -87,6 +87,47 @@ const myWork = () => {
                 <br />
                 具体的にはナビゲーションバーを上部に固定して、訪問者が好きなタイミングで必要な情報にアクセス出来るようにしました。また、ファーストビューにキャッチコピーと製品のイメージ写真を使用し、どのような製品なのかを直感的にイメージしやすいようにしました。
               </p>
+            </div>
+            <div className={styles.imgBox}>
+              <p className={styles.heading}>画面イメージ</p>
+              <ul>
+                <li>
+                  <figure>
+                    <Image
+                      src="/llsensor_top.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・トップページ</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <Image
+                      src="/llsensor_about-item.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・製品概要ページ</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <Image
+                      src="/llsensor_about-company.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・会社概要ページ</figcaption>
+                  </figure>
+                </li>
+              </ul>
             </div>
           </SectionLayout>
 
