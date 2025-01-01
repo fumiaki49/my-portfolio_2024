@@ -39,14 +39,14 @@ const myWork = () => {
         >
           <SectionLayout styleName={"first-view works"}>
             <PageTitle word="カメラ方式タッチパネル製品紹介サイト" />
-            <a
+            {/* <a
               href="https://www.xiroku.com/touchpanel/index.html"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >
               https://www.xiroku.com/touchpanel/index.html
-            </a>
+            </a> */}
           </SectionLayout>
 
           <SectionLayout styleName={styles.worksImg}>
@@ -87,6 +87,47 @@ const myWork = () => {
                 <br />
                 カメラ方式タッチパネルは画面に触れなくても画面操作が可能になるという現代的な技術なので、サイト全体を通してアニメーションを取り入れることで、よりモダンな印象を持っていただけるように意識しました。その他、旧サイトの問い合わせや製品概要への動線が分かりづらかった点を改善するためにサイトの上部にナビゲーションバーを固定し、訪問者が迷わないように意識して設計いたしました。
               </p>
+            </div>
+            <div className={styles.imgBox}>
+              <p className={styles.heading}>画面イメージ</p>
+              <ul>
+                <li>
+                  <figure>
+                    <Image
+                      src="/touch-panel_top.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・トップページ</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <Image
+                      src="/touch-panel_about-item.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・製品概要ページ</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <Image
+                      src="/touch-panel_uservoice.png"
+                      width="500"
+                      height="800"
+                      alt="screen-image"
+                      priority
+                    />
+                    <figcaption>・導入事例ページ</figcaption>
+                  </figure>
+                </li>
+              </ul>
             </div>
           </SectionLayout>
 
