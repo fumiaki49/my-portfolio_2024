@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import * as motion from "framer-motion/client";
 
 import SectionLayout from "@/components/SectionLayout";
 import MyProfile from "@/components/MyProfile";
 import PageTitle from "@/components/PageTitle";
+import PageTransition from "@/components/PageTransition";
 
 import styles from "@/app/profile/profile.module.css";
 
@@ -14,18 +14,6 @@ export const metadata = {
 };
 
 const Profile = () => {
-  const pageVariants = {
-    initial: { opacity: 0 },
-    in: { opacity: 1 },
-    out: { opacity: 0 },
-  };
-
-  const pageTransition = {
-    type: "tween",
-    ease: "anticipate",
-    duration: 1.5, // アニメーションの速度
-  };
-
   const aboutMe = `1997年4月9日生まれの27歳で、滋賀県で生まれ育ちました。\n京都外国語専門学校卒業後は、興味があったWEB制作を学ぶためにTECH::EXPERTにてプログラミングの学習をしました。\n現在は株式会社ニューコムの営業企画部のウェブ担当として、主にWEBサイトの情報更新やページ作成、既存ページのリニューアルを担当しています。その他、年に数回開催されている展示会で使用する各種資料の準備や動画制作、ブーススタッフの業務も担当しています。\n日々の業務では、動画編集をはじめ、経験の無い仕事を担当する事もあるので、初めての事であっても、自身の経験になると捉えて、取り組んでいます。`;
   const titleText = "My Profile.";
   const myHistory = [
@@ -88,13 +76,7 @@ const Profile = () => {
 
   return (
     <main id="top">
-      <motion.div
-        initial="initial" // 初期状態
-        animate="in" // 表示状態
-        exit="out" // 終了状態
-        variants={pageVariants} // 定義したアニメーションを適用
-        transition={pageTransition} // アニメーションの遷移
-      >
+      <PageTransition>
         <SectionLayout styleName={"first-view"}>
           <PageTitle word={titleText} />
         </SectionLayout>
@@ -188,7 +170,7 @@ const Profile = () => {
             </ul>
           </div>
         </SectionLayout>
-      </motion.div>
+      </PageTransition>
     </main>
   );
 };
