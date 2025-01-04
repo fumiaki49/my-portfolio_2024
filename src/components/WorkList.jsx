@@ -49,7 +49,8 @@ const WorksList = () => {
                     width={1280}
                     height={850}
                     alt={work.alt}
-                    priority
+                    placeholder="blur"
+                    blurDataURL={work.src}
                   />
                 </div>
                 <p className="work-title">{work.workTitle}</p>
