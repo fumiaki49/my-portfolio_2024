@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -36,6 +37,8 @@ const WorksList = () => {
 
   const pathname = usePathname();
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <ul className="work-list">
       {cardArry.map((work) => {
@@ -49,8 +52,8 @@ const WorksList = () => {
                     width={1280}
                     height={850}
                     alt={work.alt}
-                    placeholder="blur"
-                    blurDataURL={work.src}
+                    className={`${isImageLoaded ? "removeBlur" : "blur"}`}
+                    onLoad={() => setIsImageLoaded(true)}
                   />
                 </div>
                 <p className="work-title">{work.workTitle}</p>
