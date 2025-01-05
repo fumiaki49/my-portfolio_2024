@@ -72,7 +72,6 @@ const myWork = () => {
                     width="500"
                     height="800"
                     alt="screen-image"
-                    priority
                   />
                   <figcaption>・トップページ</figcaption>
                 </figure>
@@ -84,7 +83,6 @@ const myWork = () => {
                     width="500"
                     height="800"
                     alt="screen-image"
-                    priority
                   />
                   <figcaption>・製品概要ページ</figcaption>
                 </figure>
@@ -96,7 +94,6 @@ const myWork = () => {
                     width="500"
                     height="800"
                     alt="screen-image"
-                    priority
                   />
                   <figcaption>・導入事例ページ</figcaption>
                 </figure>
