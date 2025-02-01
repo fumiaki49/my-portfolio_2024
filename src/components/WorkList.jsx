@@ -10,18 +10,6 @@ import { usePathname } from "next/navigation";
 const WorksList = () => {
   const cardArry = [
     {
-      href: "/works/llsensor/",
-      src: "/llsensor.png",
-      alt: "llsensor",
-      workTitle: "株式会社ニューコム | LLsensor製品紹介サイト",
-    },
-    {
-      href: "/works/touchpanel/",
-      src: "/touchpanel.png",
-      alt: "touchpanel",
-      workTitle: "株式会社ニューコム | カメラ方式タッチパネル製品紹介サイト",
-    },
-    {
       href: "/works/dbsheet/",
       src: "/dbsheet.png",
       alt: "dbsheet",
@@ -32,6 +20,18 @@ const WorksList = () => {
       src: "/soutaiya_kawahara.png",
       alt: "soutaiya_kawahara",
       workTitle: "掃苔屋かわはら サービス紹介サイト",
+    },
+    {
+      href: "/works/llsensor/",
+      src: "/llsensor.png",
+      alt: "llsensor",
+      workTitle: "株式会社ニューコム | LLsensor製品紹介サイト",
+    },
+    {
+      href: "/works/touchpanel/",
+      src: "/touchpanel.png",
+      alt: "touchpanel",
+      workTitle: "株式会社ニューコム | カメラ方式タッチパネル製品紹介サイト",
     },
   ];
 
