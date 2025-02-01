@@ -64,6 +64,9 @@ const myWork = () => {
           </div>
           <div className={styles.imgBox}>
             <p className={styles.heading}>画面イメージ</p>
+            <p className={styles.annotation}>
+              ※現在は事業売却に伴い、サイトはクローズされています。以下は当時のキャプチャ画像です。
+            </p>
             <ul>
               <li>
                 <figure>
