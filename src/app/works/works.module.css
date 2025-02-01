@@ -56,3 +56,9 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+.annotation {
+  text-indent: -1em;
+  padding-left: 1em;
+  font-size: 14px;
+}
