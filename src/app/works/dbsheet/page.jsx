@@ -22,12 +22,12 @@ const myWork = () => {
         <SectionLayout styleName={"first-view works"}>
           <PageTitle word="dbSheet 製品紹介サイト" />
           <a
-            href="https://dbsheetclient.jp/"
+            href="https://dbsheet.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.link}
           >
-            https://dbsheetclient.jp/
+            https://dbsheet.jp/
           </a>
         </SectionLayout>
 
